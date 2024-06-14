@@ -1,5 +1,6 @@
 import requests
 from urllib.parse import urlparse
+from .response_analyzer import analyze_response
 
 class CRLFScanner:
     def __init__(self, payloads):
@@ -11,11 +12,12 @@ class CRLFScanner:
             try:
                 parsed_url = urlparse(url)
                 target_url = f"{parsed_url.scheme}://{parsed_url.netloc}{parsed_url.path}?{parsed_url.query}{payload}"
+                print(f"Testing URL: {target_url}")  # Debugging output
                 
                 response = requests.get(target_url)
+                print(f"Response Headers: {response.headers}")  # Debugging output
                 
-                # Check for CRLF Injection indication in response headers
-                if any(header in response.headers for header in ['Injected-Header', 'Test-Header', 'X-Injected-Header']):
+                if analyze_response(response):
                     results.append((url, payload, "Vulnerable"))
                 else:
                     results.append((url, payload, "Not Vulnerable"))
