@@ -32,15 +32,18 @@ CRLFScanner/
 ## Instalasi
 
 1. **Clone repositori ini**:
-   ```sh
+
+```sh
    git clone https://github.com/imhunterand/CRLFScanner.git
    cd CRLFScanner
 ```
 2. Instalasi Dependensi:
+
 ```
 pip install -r requirements.txt
 pip3 install -r requirements.txt
 ```
+
 ## Cara Penggunaan
 **Menyiapkan Daftar URL dan Payload**
  * Daftar URL: Simpan URL target dalam file teks, satu URL per baris. Contoh:
