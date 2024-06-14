@@ -1,5 +1,7 @@
-# CRLFScanner
-
+### 
+|    “CRLFScanner”    |
+| ------------- |
+|![Index](https://i.ibb.co/D1wwwr9/Copy-of-Black-Modern-Web-3-Technology-You-Tube-Thumbnail-1.png)|
 ## Deskripsi Proyek
 
 CRLFScanner adalah alat pemindai yang dikembangkan untuk mendeteksi kerentanan CRLF Injection pada aplikasi web. Injeksi CRLF adalah kerentanan keamanan web yang memungkinkan penyerang menyuntikkan karakter carriage return (CR) dan linefeed (LF) ke dalam input aplikasi web, yang dapat menyebabkan berbagai jenis serangan seperti HTTP Response Splitting, Header Injection, dan manipulasi konten. Alat ini dirancang untuk membantu pengembang dan profesional keamanan web dalam mengidentifikasi dan mengatasi kerentanan ini.
