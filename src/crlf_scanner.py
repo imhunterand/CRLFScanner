@@ -13,10 +13,10 @@ class CRLFScanner:
                 parsed_url = urlparse(url)
                 target_url = f"{parsed_url.scheme}://{parsed_url.netloc}{parsed_url.path}?{parsed_url.query}{payload}"
                 print(f"Testing URL: {target_url}")  # Debugging output
-                
+
                 response = requests.get(target_url)
                 print(f"Response Headers: {response.headers}")  # Debugging output
-                
+
                 if analyze_response(response):
                     results.append((url, payload, "Vulnerable"))
                 else:
