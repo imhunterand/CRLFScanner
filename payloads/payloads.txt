@@ -1,0 +1,3 @@
+%0d%0aInjected-Header: CRLF
+%0d%0aTest-Header: Test
+%0d%0aX-Injected-Header: X-Test
