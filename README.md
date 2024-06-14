@@ -33,7 +33,7 @@ CRLFScanner/
 
 1. **Clone repositori ini**:
    ```sh
-   git clone https://github.com/username/CRLFScanner.git
+   git clone https://github.com/imhunterand/CRLFScanner.git
    cd CRLFScanner
 ```
 2. Instalasi Dependensi:
