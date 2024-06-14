@@ -17,9 +17,10 @@ class MultiThreadScanner:
         chunk_size = len(self.urls) // self.num_threads
         for i in range(self.num_threads):
             chunk = self.urls[i * chunk_size:(i + 1) * chunk_size]
-            thread = threading.Thread(target=self.worker, args=(chunk,))
-            threads.append(thread)
-            thread.start()
+            if chunk:  # Ensure there are URLs in the chunk
+                thread = threading.Thread(target=self.worker, args=(chunk,))
+                threads.append(thread)
+                thread.start()
 
         for thread in threads:
             thread.join()
