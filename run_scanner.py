@@ -24,5 +24,9 @@ def main():
     logger = Logger(args.output)
     logger.log(results)
 
+    # Print summary of results
+    for result in results:
+        print(result)
+
 if __name__ == '__main__':
     main()

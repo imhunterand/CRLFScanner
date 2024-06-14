@@ -9,4 +9,5 @@ class Logger:
             writer = csv.writer(file)
             writer.writerow(["URL", "Payload", "Result"])
             for result in results:
+                print(f"Logging result: {result}")  # Debugging output
                 writer.writerow(result)

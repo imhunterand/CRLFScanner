@@ -9,6 +9,7 @@ class MultiThreadScanner:
 
     def worker(self, urls):
         for url in urls:
+            print(f"Scanning URL: {url}")  # Debugging output
             self.results.extend(self.scanner.check_crlf_injection(url))
 
     def run(self):
